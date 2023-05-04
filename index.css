@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -8,10 +9,7 @@ body {
   border: 1px solid black;
   margin: 12px auto;
   background-color: rgba(17, 24, 39, 1);
-  ;
 }
-
-
 
 #hero {
   display: flex;
@@ -19,9 +17,8 @@ body {
   align-items: center;
   color: rgba(245, 243, 255, 1);
   background-color: rgb(105, 67, 255);
-  padding-bottom: 25px;
   height: 285px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #user-input {
@@ -29,6 +26,10 @@ body {
   height: 85px;
   border: 2px solid #b295ff;
   border-radius: 5px;
+  background:rgb(105, 67, 255);
+  text-align: center;
+  font-size: 60px;
+  color: #ffffff;
 }
 
 #convert-btn {
@@ -39,7 +40,22 @@ body {
   border-radius: 5px;
 }
 
+#results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 445px;
+  justify-content: space-around;
+  background: rgb(31,41,55);
+}
+
 .results-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   width: 500px;
   height: 110px;
+  background: rgb(39, 53, 73);
+  color: rgb(204, 193, 255);
 }
