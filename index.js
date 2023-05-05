@@ -10,20 +10,26 @@ const massReadout = document.getElementById("mass");
 1 kilogram = 2.204 pound
 */
 
-
 convertBtn.addEventListener("click", () => {
   let lengthResult = "";
   let volumeResult = "";
   let massResult = "";
-  
-  lengthResult = `<p class="result-fields">${userInput.value} meters = ${(userInput.value * 3.281).toFixed(3)} feet | ${userInput.value} feet = ${(userInput.value / 3.281).toFixed(3)} meters</p>`;
 
-  volumeResult = `<p class="result-fields">${userInput.value} liters = ${(userInput.value * 0.264).toFixed(3)} gallons | ${userInput.value} gallons = ${(userInput.value / 0.264).toFixed(3)} liters</p>`;
+  lengthReadout.innerHTML = "";
+  volumeReadout.innerHTML = "";
+  massReadout.innerHTML = "";
 
-  massResult = `<p class="result-fields">${userInput.value} kilos = ${(userInput.value * 2.204).toFixed(3)} pounds | ${userInput.value} pounds = ${(userInput.value / 2.204).toFixed(3)} kilos</p>`;
+  if (userInput.value) {
+    lengthResult = `<p class="result-fields">${userInput.value} meters = ${(userInput.value * 3.281).toFixed(3)} feet | ${userInput.value} feet = ${(userInput.value / 3.281).toFixed(3)} meters</p>`;
 
+    volumeResult = `<p class="result-fields">${userInput.value} liters = ${(userInput.value * 0.264).toFixed(3)} gallons | ${userInput.value} gallons = ${(userInput.value / 0.264).toFixed(3)} liters</p>`;
 
-
+    massResult = `<p class="result-fields">${userInput.value} kilos = ${(userInput.value * 2.204).toFixed(3)} pounds | ${userInput.value} pounds = ${(userInput.value / 2.204).toFixed(3)} kilos</p>`;
+  } else {
+    lengthReadout.innerHTML = "";
+    volumeReadout.innerHTML = "";
+    massReadout.innerHTML = "";
+  }
   lengthReadout.innerHTML += lengthResult;
   volumeReadout.innerHTML += volumeResult;
   massReadout.innerHTML += massResult;
