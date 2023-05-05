@@ -45,7 +45,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 445px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: rgb(31,41,55);
 }
 
@@ -58,4 +58,8 @@ body {
   height: 110px;
   background: rgb(39, 53, 73);
   color: rgb(204, 193, 255);
+}
+
+.result-fields {
+  color: white;
 }
